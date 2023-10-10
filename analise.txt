@@ -1,0 +1,18 @@
+- Model:
+  - Manutenção das informações no local storage
+    - Classe PessoasDb
+  - Classe Pessoa com todos os dados
+    - nome, foto (link), habilidades, notas
+  
+- Controller:
+  - PessoasController: classe CRUD para Pessoas
+
+- View:
+  - tela de cadastro e alteração de pessoas
+    - várias habilidades com nota 1-10
+  - tela de apresentação
+    - cards das pessoas
+      - foto
+      - botão de alteração
+      - habilidades e notas
+    - botão de cadastro (+)
