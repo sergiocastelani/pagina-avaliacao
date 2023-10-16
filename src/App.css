@@ -16,3 +16,12 @@ ul{
   list-style: url(./assets/medal.png);
   font-weight: 500;
 }
+/* RegisterButton {
+  position: fixed;
+  bottom: 7vh;
+  right: 7vw;
+} */
+
+.BtnRegister{
+  background: transparent;
+}
