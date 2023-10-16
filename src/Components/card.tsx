@@ -15,7 +15,7 @@ export default function CreateCards(props:Personprops){
                 <li>Skill 2</li>
                 <li>Skill 3</li>
             </ul>
-            <Button text='See more'></Button>
+            <Button text='Edit'></Button>
         </>
     )
 }

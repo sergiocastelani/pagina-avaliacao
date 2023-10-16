@@ -13,6 +13,36 @@ function App() {
         <Card>
           <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
         </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+        <Card>
+          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
+        </Card>
+
+
         <RegisterButton></RegisterButton>
       </BoardStyle>
     </>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Card = styled.div`
     width: 14em;
     display: flex;
-    gap: .6em;
+    gap: .4em;
     flex-direction: column;
     justify-content: center;
     padding: 1em 2em;
@@ -17,18 +17,21 @@ export const Card = styled.div`
 `;
 
 export const BoardStyle = styled.div`
-    width: 90vw;
-    height: 90vh;
+    width: 95vw;
+    height: 95vh;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
     border-radius: 2em;
     background: linear-gradient(to bottom, #EAEAEA, #D3D3D3);
+    flex-wrap: wrap;
 `
 export const RegisterButtonStyled = styled.div`
     position: fixed;
-    bottom: 8%;
-    right: 6%;
+    bottom: 4%;
+    right: 4%;
     background-color: transparent;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, .5));
     
