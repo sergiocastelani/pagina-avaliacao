@@ -1,34 +1,25 @@
-import CreateCards from './Components/Card/card'
-import { BoardStyle } from './Style'
-import { Card } from './Style'
+import { Board } from './Components/Board'
+import { Card } from './Components/Card'
 import './App.css'
-import RegisterButton from './Components/RegisterButton/RegisterButton'
+import {RegisterButton} from './Components/RegisterButton'
 
 function App() {
 
 
   return (
     <>
-      <BoardStyle>
-        <Card>
-          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
-        </Card>
+      <Board>
+        <Card name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></Card>
 
-        <Card>
-          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
-        </Card>
+        <Card name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></Card>
 
-        <Card>
-          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
-        </Card>
+        <Card name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></Card>
 
-        <Card>
-          <CreateCards name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></CreateCards>
-        </Card>
+        <Card name='Samu' photo='https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cldepgc7t0009ju08myoyr3pu_3/public'></Card>
 
 
         <RegisterButton></RegisterButton>
-      </BoardStyle>
+      </Board>
     </>
 
   )

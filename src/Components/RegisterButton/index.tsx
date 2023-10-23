@@ -1,9 +1,17 @@
 
-import { RegisterButtonStyled } from '../../Style'
-export default function RegisterButton() {
+import styled from 'styled-components';
+
+export const RegisterButtonStyled = styled.div`
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    background-color: transparent;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, .5));
+    
+`
+export function RegisterButton() {
     return (
         <RegisterButtonStyled>
-
             <button className='BtnRegister'>
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">

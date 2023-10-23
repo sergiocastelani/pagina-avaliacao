@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BoardStyle = styled.div`
+export const Board = styled.div`
     width: 95vw;
     height: 95vh;
     padding: 1em;
