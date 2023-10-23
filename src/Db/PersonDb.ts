@@ -3,7 +3,7 @@ import { Person } from '../Model/Person';
 export class PersonDb 
 {
 
-  static insert (person: Person)
+  static add (person: Person)
   {
     PersonDb._transaction(() => {
       let exists = PersonDb._persons.some(p => p.id === person.id);
@@ -14,7 +14,7 @@ export class PersonDb
     });
   }
 
-  static insertAll (persons: Person[])
+  static addAll (persons: Person[])
   {
     PersonDb._transaction(() => {
       for (let person of persons) 
@@ -29,6 +29,7 @@ export class PersonDb
   }
 
   static getAll() {
+    PersonDb._load();
     return structuredClone(PersonDb._persons);
   }
 
@@ -43,6 +44,18 @@ export class PersonDb
     });
 
     return result;
+  }
+
+  static update (person: Person)
+  {
+    PersonDb._transaction(() => {
+      let existingPersonIndex = PersonDb._persons.findIndex(p => p.id === person.id);
+      if (existingPersonIndex < 0)
+        throw new Error('There is no Person with this ID');
+
+      PersonDb._persons.splice(existingPersonIndex, 1);
+      PersonDb._persons.push(person);
+    });
   }
 
   //----------------
