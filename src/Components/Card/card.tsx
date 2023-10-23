@@ -1,5 +1,5 @@
 // import {Person} from '../Model/Person' 
-import Button from './button'
+import Button from '../Button/button'
 interface Personprops {
     name:string
     photo:string

@@ -1,5 +1,5 @@
 
-import { RegisterButtonStyled } from '../Style'
+import { RegisterButtonStyled } from '../../Style'
 export default function RegisterButton() {
     return (
         <RegisterButtonStyled>
