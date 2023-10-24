@@ -1,39 +1,78 @@
-// import {Person} from '../Model/Person' 
-import {Button} from '../Button'
+// import {Person} from '../Model/Person'
+// import {Button} from '../Button'
 import styled from 'styled-components';
 
 interface Personprops {
-    name:string
-    photo:string
+  name: string;
+  photo: string;
+  skills: string[];
+  linkedin?: string;
+  github?: string;
 }
 
 const CardContainer = styled.div`
-    width: 14em;
-    display: flex;
-    gap: .4em;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em 2em;
-    border-radius: 1em;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.4px);
-    -webkit-backdrop-filter: blur(6.4px);
-    color: #333; 
+  width: 14em;
+  display: flex;
+  gap: 0.4em;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 2em;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  color: #333;
+
+ 
 `;
 
-export function Card(props:Personprops){
-    return (
-        <CardContainer>
-            <h2> {props.name}</h2>
-            <img src={props.photo} alt="" className='profile' />
-            <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-            </ul>
-            <Button text='Edit'></Button>
-        </CardContainer>
-    )
+const DivLinks = styled.div`
+/* margin-left: 50%;
+  width: 20%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a:hover{
+    transform: scale(1.5);
+  }
+
+  a:first-child {
+    color: #0077B5
+  }
+  a:last-child{
+    color: #0d1117
+  }
+`;
+
+let id = 1;
+
+export function Card(props: Personprops) {
+  return (
+    <CardContainer>
+      <h2> {props.name}</h2> 
+      
+      <img src={props.photo} alt="" className="profile" />
+      
+      <ul>
+        {props.skills.map((skill) => (
+          <li key={id}>{skill}</li>
+        ))}
+      </ul>
+      
+      <DivLinks>
+        <a href={props.linkedin} target='blank'>
+        <i className="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href={props.github} target='blank'>
+        <i className="fa-brands fa-github"></i>
+        </a>
+      </DivLinks>
+    </CardContainer>
+  );
 }
+
+// {/* <Button text='Edit'></Button> */}
