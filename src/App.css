@@ -15,9 +15,22 @@
 ul{
   list-style: url(./assets/medal.png);
   font-weight: 500;
+  text-align: start;
+  margin: auto;
+  padding: 1.5em 0;
 }
 
-.BtnRegister{
+.BtnRegister {
   background: transparent;
+  color: #1a1a1a8f;
+
+  :hover{
+    transform: scale(1.15);
+  }
+
+  ::before{
+    border: none;
+  }
+  
 }
 

@@ -8,7 +8,9 @@ export class Person
 
   constructor(
     public name : string, 
-    public photo : string
+    public photo : string,
+    public linkedin?: string,
+    public github ?: string,
   ){
     this._id = uuidv4();
   }
