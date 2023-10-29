@@ -43,5 +43,17 @@ button {
   display: flex;
   justify-content: space-between;
 }
+button:hover{
+ 
+    transform: scale(1.2);
+  
+}
+
+#cancelar{
+background-color: #CD5C5C;
+}
+#salvar{
+background-color: #8FBC8F;
+}
 
 

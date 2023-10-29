@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import {Button} from '../Button'
 import styled from 'styled-components';
 
 interface Personprops {
@@ -25,54 +24,61 @@ const CardContainer = styled.div`
   backdrop-filter: blur(6.4px);
   -webkit-backdrop-filter: blur(6.4px);
   color: #333;
-
- 
 `;
 
 const DivLinks = styled.div`
-/* margin-left: 50%;
-  width: 20%; */
+padding-top: 1em;
+padding-bottom: 0.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  a:hover{
+  i:hover {
+    cursor: pointer;
     transform: scale(1.5);
   }
 
-  a:first-child {
-    color: #0077B5
+  .fa-linkedin-in {
+    color: #0077b5;
   }
-  a:last-child{
-    color: #0d1117
+
+  .fa-github {
+    color: #0d1117;
+  }
+
+  .fa-user-pen {
+    color: #cd5c5c;
   }
 `;
 
 export function Card(props: Personprops) {
-  const navigate =  useNavigate();
+  const navigate = useNavigate();
 
   return (
     <CardContainer>
-      <h2> {props.name}</h2> 
-      
+      <h2> {props.name}</h2>
+
       <img src={props.photo} alt="" className="profile" />
-      
+
       <ul>
         {props.skills.map((skill) => (
           <li key={skill}>{skill}</li>
         ))}
       </ul>
-      
+
       <DivLinks>
-        <a href={props.linkedin} target='blank'>
-        <i className="fa-brands fa-linkedin-in"></i>
+        <a href={props.linkedin} target="blank">
+          <i className="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a href={props.github} target='blank'>
-        <i className="fa-brands fa-github"></i>
+        <a href={props.github} target="blank">
+          <i className="fa-brands fa-github"></i>
         </a>
+        <i
+          onClick={() => navigate(`/edit/${props.id}`)}
+          className="fa-solid fa-user-pen"
+        ></i>
       </DivLinks>
-      <Button text='Editar' onClick={() => navigate(`/edit/${props.id}`)}></Button>
     </CardContainer>
   );
 }
