@@ -7,6 +7,7 @@ export const RegisterButtonStyled = styled.div`
     right: 4%;
     background-color: transparent;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, .5));
+    color:black !important;
     
 `
 export function RegisterButton() {
