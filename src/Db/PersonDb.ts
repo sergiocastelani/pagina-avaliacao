@@ -6,7 +6,7 @@ export class PersonDb
   static add (person: Person)
   {
     PersonDb._transaction(() => {
-      let exists = PersonDb._persons.some(p => p.id === person.id);
+      let exists = PersonDb._persons.some(p => p._id === person._id);
       if (exists)
         throw new Error('A Person with this ID already exists');
 
@@ -19,7 +19,7 @@ export class PersonDb
     PersonDb._transaction(() => {
       for (let person of persons) 
       {
-        let exists = PersonDb._persons.some(p => p.id === person.id);
+        let exists = PersonDb._persons.some(p => p._id === person._id);
         if (exists)
           throw new Error('A Person with this ID already exists');
       }
@@ -38,7 +38,7 @@ export class PersonDb
     let result : Person | undefined;
 
     PersonDb._transaction(() => {
-      result = PersonDb._persons.find(p => p.id === id);
+      result = PersonDb._persons.find(p => p._id === id);
       if (result)
         result = structuredClone(result);
     });
@@ -49,7 +49,7 @@ export class PersonDb
   static update (person: Person)
   {
     PersonDb._transaction(() => {
-      let existingPersonIndex = PersonDb._persons.findIndex(p => p.id === person.id);
+      let existingPersonIndex = PersonDb._persons.findIndex(p => p._id === person._id);
       if (existingPersonIndex < 0)
         throw new Error('There is no Person with this ID');
 

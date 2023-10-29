@@ -1,8 +1,9 @@
-// import {Person} from '../Model/Person'
-// import {Button} from '../Button'
+import { useNavigate } from 'react-router-dom';
+import {Button} from '../Button'
 import styled from 'styled-components';
 
 interface Personprops {
+  id: string;
   name: string;
   photo: string;
   skills: string[];
@@ -47,9 +48,9 @@ const DivLinks = styled.div`
   }
 `;
 
-let id = 1;
-
 export function Card(props: Personprops) {
+  const navigate =  useNavigate();
+
   return (
     <CardContainer>
       <h2> {props.name}</h2> 
@@ -58,7 +59,7 @@ export function Card(props: Personprops) {
       
       <ul>
         {props.skills.map((skill) => (
-          <li key={id}>{skill}</li>
+          <li key={skill}>{skill}</li>
         ))}
       </ul>
       
@@ -71,8 +72,7 @@ export function Card(props: Personprops) {
         <i className="fa-brands fa-github"></i>
         </a>
       </DivLinks>
+      <Button text='Editar' onClick={() => navigate(`/edit/${props.id}`)}></Button>
     </CardContainer>
   );
 }
-
-// {/* <Button text='Edit'></Button> */}
