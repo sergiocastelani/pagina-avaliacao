@@ -1,6 +1,6 @@
 import { Board } from './Components/Board';
 import { Card } from './Components/Card';
-import './App.css';
+import './CardList.css';
 import { RegisterButton } from './Components/RegisterButton';
 import { PersonDb } from './Db/PersonDb';
 import { Person } from './Model/Person';
@@ -52,7 +52,7 @@ function init() {
 init();
 
 
-function App() {
+function CardList() {
   const people = PersonDb.getAll();
 
   function renderCards() 
@@ -84,4 +84,4 @@ function App() {
 }
 
 
-export default App;
+export default CardList;
