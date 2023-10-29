@@ -64,7 +64,8 @@ function CardList() {
 
       return (
         <Card
-          key={ person.id } 
+          key={ person._id } 
+          id={ person._id } 
           name={person.name}
           photo={person.photo}
           linkedin={person.linkedin}

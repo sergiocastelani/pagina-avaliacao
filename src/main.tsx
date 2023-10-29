@@ -14,6 +14,10 @@ const router = createBrowserRouter([
     path: "/new",
     element: <Form/>,
   },
+  {
+    path: "/edit/:personId",
+    element: <Form/>,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

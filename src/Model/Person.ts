@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export class Person 
 {
-  private _id : string;
+  public _id : string;
   public abilities : Ability[] = [];
 
   constructor(
@@ -15,5 +15,4 @@ export class Person
     this._id = uuidv4();
   }
 
-  get id() : string { return this._id; }
 }
