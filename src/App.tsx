@@ -15,39 +15,39 @@ function init() {
 
   if(pessoas.length === 0)
   {
-const samuel = new Person(
-  'Samuel',Imgsamuel, 'https://www.linkedin.com/in/samuel-ramos-dev/', 'https://github.com/ProgSamuel/'
-);
-samuel.abilities.push(new Ability('Criatividade', 10));
-samuel.abilities.push(new Ability('Entusiasmo', 10));
-samuel.abilities.push(new Ability('Trabalho em equipe', 10));
-// PersonDb.add(samuel);
+    const samuel = new Person(
+      'Samuel',Imgsamuel, 'https://www.linkedin.com/in/samuel-ramos-dev/', 'https://github.com/ProgSamuel/'
+    );
+    samuel.abilities.push(new Ability('Criatividade', 10));
+    samuel.abilities.push(new Ability('Entusiasmo', 10));
+    samuel.abilities.push(new Ability('Trabalho em equipe', 10));
 
-const sergio = new Person(
-  'Sérgio',Imgsergio, 'https://www.linkedin.com/in/sergiocastelani/', 'https://github.com/sergiocastelani')
-sergio.abilities.push(new Ability('Liderança', 10));
-sergio.abilities.push(new Ability('Pensamento critíco', 10));
-sergio.abilities.push(new Ability('Gosto pelo aprendizado', 10));
-// PersonDb.add(sergio);
+    const sergio = new Person(
+      'Sérgio',Imgsergio, 'https://www.linkedin.com/in/sergiocastelani/', 'https://github.com/sergiocastelani'
+    )
+    sergio.abilities.push(new Ability('Liderança', 10));
+    sergio.abilities.push(new Ability('Pensamento critíco', 10));
+    sergio.abilities.push(new Ability('Gosto pelo aprendizado', 10));
 
-const renato = new Person(
-  'Renato', Imgrenato, 'https://www.linkedin.com/in/renatodossantos-s-/', 'https://github.com/Renass21');
-renato.abilities.push(new Ability('Criatividade', 10));
-renato.abilities.push(new Ability('Gosto pelo aprendizado', 10));
-renato.abilities.push(new Ability('Trabalho em equipe', 10));
-// PersonDb.add(renato);
+    const renato = new Person(
+      'Renato', Imgrenato, 'https://www.linkedin.com/in/renatodossantos-s-/', 'https://github.com/Renass21'
+    );
+    renato.abilities.push(new Ability('Criatividade', 10));
+    renato.abilities.push(new Ability('Gosto pelo aprendizado', 10));
+    renato.abilities.push(new Ability('Trabalho em equipe', 10));
 
-const kelly = new Person(
-  'Kelly', Imgkelly, 'https://www.linkedin.com/in/kelly-ferreira-00b656200/', 'https://github.com/kellycristine');
-kelly.abilities.push(new Ability('Perseverança', 10));
-kelly.abilities.push(new Ability('Comunicativa', 10));
-kelly.abilities.push(new Ability('Trabalho em equipe', 10));
-PersonDb.add(kelly)
-PersonDb.add(renato)
-PersonDb.add(samuel)
-PersonDb.add(sergio)
-}
-console.log(PersonDb.getAll());
+    const kelly = new Person(
+      'Kelly', Imgkelly, 'https://www.linkedin.com/in/kelly-ferreira-00b656200/', 'https://github.com/kellycristine'
+    );
+    kelly.abilities.push(new Ability('Perseverança', 10));
+    kelly.abilities.push(new Ability('Comunicativa', 10));
+    kelly.abilities.push(new Ability('Trabalho em equipe', 10));
+
+    PersonDb.add(kelly)
+    PersonDb.add(renato)
+    PersonDb.add(samuel)
+    PersonDb.add(sergio)
+  }
 }
 init();
 
@@ -55,7 +55,8 @@ init();
 function App() {
   const people = PersonDb.getAll();
 
-  const renderCards = () => {
+  function renderCards() 
+  {
     return people.map((person) => {
       const abilitiesArray: string[] = person.abilities.map(
         (ability) => ability.name

@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import { Button } from "../Button"
 import { Container, StyleForm } from "./Styles";
 
@@ -7,7 +8,6 @@ export const Form = ()=> {
           
     };
     return(
-        <>
         <Container className="card-formulario">
             <StyleForm>
                 <input 
@@ -35,13 +35,9 @@ export const Form = ()=> {
                 type="text" placeholder="Digite sua habilidade 3" 
                 {...register("skillThird", {required:  true})}
                 />
-                <Button onClick={()=> handleSubmit(onSubmit)()}
-                text="Cancelar" />
-                <Button onClick={()=> handleSubmit(onSubmit)()}
-                text="Salvar"/>    
+                <button onClick={()=> handleSubmit(onSubmit)()}>Cancelar</button>
+                <button onClick={()=> handleSubmit(onSubmit)()}>Salvar</button>
             </StyleForm>
-            </Container>
-        </>
-
+        </Container>
     )
 }
